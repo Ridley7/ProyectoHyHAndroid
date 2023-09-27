@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="36dp"
-        android:gravity="center|top"
+        android:gravity="center"
         android:text="Adivina el personaje"/>
 
     <androidx.appcompat.widget.AppCompatEditText
