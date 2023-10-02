@@ -32,6 +32,46 @@
         android:id="@+id/mainMenuFragment"
         android:name="com.jalper.personajes.MainMenuFragment"
         tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_listaPersonajesFragment"
+            app:destination="@id/listaPersonajesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.jalper.personajes.presentation.fragment.GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_wrongFragment"
+            app:destination="@id/wrongFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.jalper.personajes.SuccessFragment"
+        tools:layout="@layout/fragment_success">
+    </fragment>
+
+    <fragment
+        android:id="@+id/wrongFragment"
+        android:name="com.jalper.personajes.WrongFragment"
+        tools:layout="@layout/fragment_wrong">
+
+        <action
+            android:id="@+id/action_wrongFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listaPersonajesFragment"
+        android:name="com.jalper.personajes.ListaPersonajesFragment"
+        tools:layout="@layout/fragment_lista_personajes">
 
     </fragment>
 
