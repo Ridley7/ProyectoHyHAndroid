@@ -10,19 +10,7 @@
         android:layout_height="wrap_content"
         android:textSize="36dp"
         android:gravity="center"
-        android:text="Adivina el personaje"/>
+        android:text="Splash Screen"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:hint="Introduzca nombre del jugador"
-        android:layout_marginTop="100dp"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Entrar"
-        android:layout_marginTop="200dp"/>
 
 </RelativeLayout>

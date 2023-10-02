@@ -10,6 +10,29 @@
         android:name="com.jalper.personajes.InitialFragment"
         tools:layout="@layout/fragment_initial">
 
+        <action
+            android:id="@+id/action_initialFragment_to_insertNameFragment"
+            app:destination="@id/insertNameFragment" />
+        <action
+            android:id="@+id/action_initialFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/insertNameFragment"
+        android:name="com.jalper.personajes.InsertNameFragment"
+        tools:layout="@layout/fragment_insert_name">
+
+        <action
+            android:id="@+id/action_insertNameFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.jalper.personajes.MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu">
+
     </fragment>
 
 </navigation>
