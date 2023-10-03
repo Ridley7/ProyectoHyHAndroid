@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainMenuFragment">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_nombre_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador: "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_main_menu_jugar"
         android:layout_width="wrap_content"
@@ -41,5 +49,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         />
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,6 +47,7 @@ class InsertNameFragment : Fragment() {
                 preferences = this.getActivity()?.getSharedPreferences(PreferenceKeys.PREF_KEY, Context.MODE_PRIVATE)
                 val editor: SharedPreferences.Editor? = preferences?.edit()
                 editor?.putString(PreferenceKeys.NAME_KEY, playerName)
+                editor?.apply()
 
                 findNavController().navigate(R.id.action_insertNameFragment_to_mainMenuFragment)
             }
