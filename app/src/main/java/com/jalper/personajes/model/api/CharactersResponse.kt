@@ -1,5 +1,5 @@
 package com.jalper.personajes.model.api
-
+/*
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
@@ -48,15 +48,15 @@ enum class Status {
     Dead,
     Unknown
 }
+*/
 
 
-/*
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
 
 data class CharactersResponse(
-    @SerializedName("results") val characters: List<CharacterResponseElement>
+    @SerializedName("hola") val personajes: List<CharacterResponseElement>
 )
 
 @Keep
@@ -65,11 +65,8 @@ data class CharacterResponseElement (
     val opcionB: String,
     val opcionC: String,
     val opcionD: String,
-    val urlImage: String,
+    @SerializedName("url_image") val urlImage: String,
     val descripcion: String,
     val opcionCorrecta: String,
-    val nombrePersonaje: String
+    @SerializedName("nombre_personaje") val nombrePersonaje: String
 )
-
-
- */

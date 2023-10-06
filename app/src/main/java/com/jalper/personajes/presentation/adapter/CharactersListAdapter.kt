@@ -6,12 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jalper.personajes.databinding.RowCharacterItemBinding
-import com.jalper.personajes.model.api.Character
+import com.jalper.personajes.model.api.CharacterResponseElement
 
 class CharactersListAdapter: RecyclerView.Adapter<CharactersListAdapter.CharactersListViewHolder>() {
 
-    //private var characterList: List<CharacterResponseElement> = emptyList()
-    private var characterList: List<Character> = emptyList()
+    private var characterList: List<CharacterResponseElement> = emptyList()
+    //private var characterList: List<Character> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharactersListViewHolder {
         val binding = RowCharacterItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -25,18 +25,18 @@ class CharactersListAdapter: RecyclerView.Adapter<CharactersListAdapter.Characte
     override fun onBindViewHolder(holder: CharactersListViewHolder, position: Int) {
         val item = characterList[position]
 
-        holder.itemCharacterName.text = item.name
+        holder.itemCharacterName.text = item.nombrePersonaje
 
 
         Glide.with(holder.itemCharacterProfile)
-            .load(item.image)
+            .load(item.urlImage)
             .into(holder.itemCharacterProfile)
 
 
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun submitList(list: List<Character>) {
+    fun submitList(list: List<CharacterResponseElement>) {
         characterList = list
         notifyDataSetChanged()
     }
