@@ -47,14 +47,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/btn_optiona_character"
-            android:text="Personaje A"/>
+            android:text="Personaje B"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_optionc_character"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/btn_optionb_character"
-            android:text="Personaje A"/>
+            android:text="Personaje C"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_optiond_character"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_optionc_character"
+            android:text="Personaje D"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
