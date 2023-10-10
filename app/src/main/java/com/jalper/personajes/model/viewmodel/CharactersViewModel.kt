@@ -1,5 +1,6 @@
 package com.jalper.personajes.model.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,6 +21,7 @@ class CharactersViewModel: ViewModel() {
     //private val rickAndMortyService = ApiClient.retrofit.create(RickAndMortyService::class.java)
 
     private val characterMutableLiveData = MutableLiveData<CharacterListState>()
+    var charactersForGame: List<CharacterResponseElement> = emptyList()
 
     fun getCharacterLiveData(): LiveData<CharacterListState> {
         return  characterMutableLiveData
@@ -45,6 +47,38 @@ class CharactersViewModel: ViewModel() {
                 }
             }
         }
+    }
+
+    fun getRandomCharacter(): CharacterResponseElement{
+        val random = java.util.Random()
+        val randomIndex = random.nextInt(charactersForGame.size)
+        return charactersForGame[randomIndex]
+    }
+
+    fun setupCharactersForGame(): LiveData<CharacterListState>{
+        characterMutableLiveData.value = ResourceState.Loading()
+
+        viewModelScope.launch (Dispatchers.IO){
+            //Obtenemos personajes
+            val response = charactersService.getCharacters("templates/hmq7USqKZCQ_/data?access_token=l5wzz9nldojijjatx9h6klgykv5ztvi4jxdsndgp")
+
+            //Nos vamos al hilo principal
+            withContext(Dispatchers.Main){
+                try {
+                    if(response.isSuccessful && response.body() != null){
+                        characterMutableLiveData.value = ResourceState.Success(response.body()!!.personajes)
+                        charactersForGame = response.body()!!.personajes
+
+                    }else{
+                        characterMutableLiveData.value = ResourceState.Error(response.errorBody()?.string().orEmpty())
+                    }
+                }catch (e: Exception){
+                    characterMutableLiveData.value = ResourceState.Error("Ha ocurrido un error")
+                }
+            }
+        }
+
+        return characterMutableLiveData
     }
 
 

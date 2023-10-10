@@ -61,12 +61,12 @@ data class CharactersResponse(
 
 @Keep
 data class CharacterResponseElement (
-    val opcionA: String,
-    val opcionB: String,
-    val opcionC: String,
-    val opcionD: String,
+    @SerializedName("opcion_a") val opcionA: String,
+    @SerializedName("opcion_b") val opcionB: String,
+    @SerializedName("opcion_c") val opcionC: String,
+    @SerializedName("opcion_d") val opcionD: String,
     @SerializedName("url_image") val urlImage: String,
-    val descripcion: String,
-    val opcionCorrecta: String,
+    @SerializedName("descripcion") val descripcion: String,
+    @SerializedName("opcion_correcta") val opcionCorrecta: String,
     @SerializedName("nombre_personaje") val nombrePersonaje: String
 )

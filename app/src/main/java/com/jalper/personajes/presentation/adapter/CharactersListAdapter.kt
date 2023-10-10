@@ -31,8 +31,6 @@ class CharactersListAdapter: RecyclerView.Adapter<CharactersListAdapter.Characte
         Glide.with(holder.itemCharacterProfile)
             .load(item.urlImage)
             .into(holder.itemCharacterProfile)
-
-
     }
 
     @SuppressLint("NotifyDataSetChanged")
