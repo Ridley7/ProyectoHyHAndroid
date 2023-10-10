@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.jalper.personajes.R
@@ -69,11 +70,9 @@ class GameFragment : Fragment(){
         }
     }
 
-
     private fun initUI(){
 
-        //Tenemos que obtener un objeto de la clase CharacterResponseElement
-        //Ese objeto tiene que estar disponibel en el ViewModel
+        //Seteamos textos en los botones y imagen del personaje
         val newCharacter = charactersViewModel.getRandomCharacter()
 
         //binding.ivCharacterProfile
@@ -86,6 +85,96 @@ class GameFragment : Fragment(){
             .load(newCharacter.urlImage)
             .into(binding.ivCharacterProfile)
 
+        //Asignamos la respuesta correcta al boton correspondiente
+        when(newCharacter.opcionCorrecta){
+            "opcion_a" -> {
+
+                //Si la opcion A es la correcta, de momento, tenemos que navegar al success fragment
+                //y los otros botones han de navegar al wrong fragment
+                binding.btnOptionaCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
+                }
+
+                binding.btnOptionbCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptioncCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptiondCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+            }
+
+            "opcion_b" -> {
+
+                binding.btnOptionbCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
+                }
+
+                binding.btnOptionaCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptioncCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptiondCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+            }
+
+            "opcion_c" -> {
+
+                binding.btnOptioncCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
+                }
+
+                binding.btnOptionbCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptionaCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptiondCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+            }
+
+            "opcion_d" -> {
+
+                binding.btnOptiondCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
+                }
+
+                binding.btnOptionbCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptioncCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+                binding.btnOptionaCharacter.setOnClickListener{
+                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                }
+
+            }
+            else -> Log.i("ERROR", "AQUI LA HAS LIADO")
+        }
+
     }
+
+
+
+
 }
 
