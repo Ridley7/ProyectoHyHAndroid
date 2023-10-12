@@ -22,9 +22,18 @@ class CharactersViewModel: ViewModel() {
 
     private val characterMutableLiveData = MutableLiveData<CharacterListState>()
     var charactersForGame: List<CharacterResponseElement> = emptyList()
+    private var puntuation = 0
 
     fun getCharacterLiveData(): LiveData<CharacterListState> {
         return  characterMutableLiveData
+    }
+
+    fun setPuntuation(value: Int){
+        puntuation += value
+    }
+
+    fun getPuntuation():Int{
+        return puntuation
     }
 
     fun fetchCharacters(){
