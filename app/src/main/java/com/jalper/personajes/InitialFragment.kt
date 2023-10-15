@@ -38,9 +38,6 @@ class InitialFragment : Fragment() {
 
         user_name = preferences?.getString(PreferenceKeys.NAME_KEY, "null") ?: "abc"
 
-        //binding.tvExample.text = user_name
-
-
         //Si obtenemos null no tenemos nada en shared preferences
         if(user_name == "null"){
             //Cargamos la pantalla de pedir nombre
