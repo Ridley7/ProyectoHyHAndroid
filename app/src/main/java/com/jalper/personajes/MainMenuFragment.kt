@@ -92,6 +92,10 @@ class MainMenuFragment : Fragment() {
         binding.btnMainMenuLista.setOnClickListener{
             findNavController().navigate(R.id.action_mainMenuFragment_to_listaPersonajesFragment)
         }
+
+        binding.btnHistorico.setOnClickListener{
+            findNavController().navigate(R.id.action_mainMenuFragment_to_historicoPartidasFragment)
+        }
     }
 
 }

@@ -13,7 +13,7 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="273" />
+                            <option name="x" value="263" />
                             <option name="y" value="-203" />
                           </Point>
                         </option>
@@ -30,6 +30,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="historicoPartidasFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="250" />
+                            <option name="y" value="451" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -86,8 +98,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="327" />
-                            <option name="y" value="317" />
+                            <option name="x" value="453" />
+                            <option name="y" value="188" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -98,13 +110,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="76" />
-                            <option name="y" value="99" />
+                            <option name="x" value="108" />
+                            <option name="y" value="90" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
                             <entry key="action_mainMenuFragment_to_gameFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_mainMenuFragment_to_historicoPartidasFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -128,6 +145,15 @@
                             <option name="y" value="-368" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_successFragment_to_gameFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -142,6 +168,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_wrongFragment_to_gameFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_wrongFragment_to_mainMenuFragment">
                               <value>
                                 <LayoutPositions />

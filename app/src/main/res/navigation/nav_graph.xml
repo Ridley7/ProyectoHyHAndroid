@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_listaPersonajesFragment"
             app:destination="@id/listaPersonajesFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_historicoPartidasFragment"
+            app:destination="@id/historicoPartidasFragment" />
     </fragment>
 
     <fragment
@@ -78,7 +81,12 @@
         android:id="@+id/listaPersonajesFragment"
         android:name="com.jalper.personajes.ListaPersonajesFragment"
         tools:layout="@layout/fragment_lista_personajes">
+    </fragment>
 
+    <fragment
+        android:id="@+id/historicoPartidasFragment"
+        android:name="com.jalper.personajes.presentation.fragment.HistoricFragment"
+        tools:layout="@layout/fragment_historic">
     </fragment>
 
 </navigation>
