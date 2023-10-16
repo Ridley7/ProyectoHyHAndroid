@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/initialFragment"
-        android:name="com.jalper.personajes.InitialFragment"
+        android:name="com.jalper.personajes.presentation.fragment.InitialFragment"
         tools:layout="@layout/fragment_initial">
 
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/insertNameFragment"
-        android:name="com.jalper.personajes.InsertNameFragment"
+        android:name="com.jalper.personajes.presentation.fragment.InsertNameFragment"
         tools:layout="@layout/fragment_insert_name">
 
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/mainMenuFragment"
-        android:name="com.jalper.personajes.MainMenuFragment"
+        android:name="com.jalper.personajes.presentation.fragment.MainMenuFragment"
         tools:layout="@layout/fragment_main_menu">
         <action
             android:id="@+id/action_mainMenuFragment_to_gameFragment"
@@ -57,7 +57,7 @@
 
     <fragment
         android:id="@+id/successFragment"
-        android:name="com.jalper.personajes.SuccessFragment"
+        android:name="com.jalper.personajes.presentation.fragment.SuccessFragment"
         tools:layout="@layout/fragment_success">
         <action
             android:id="@+id/action_successFragment_to_gameFragment"
@@ -66,7 +66,7 @@
 
     <fragment
         android:id="@+id/wrongFragment"
-        android:name="com.jalper.personajes.WrongFragment"
+        android:name="com.jalper.personajes.presentation.fragment.WrongFragment"
         tools:layout="@layout/fragment_wrong">
 
         <action
@@ -79,7 +79,7 @@
 
     <fragment
         android:id="@+id/listaPersonajesFragment"
-        android:name="com.jalper.personajes.ListaPersonajesFragment"
+        android:name="com.jalper.personajes.presentation.fragment.ListaPersonajesFragment"
         tools:layout="@layout/fragment_lista_personajes">
     </fragment>
 

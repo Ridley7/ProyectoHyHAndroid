@@ -10,11 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0cf584-0384-4a6a-bcc1-bde1d72b3c8d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/SuccessFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/SuccessFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/WrongFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/WrongFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/InitialFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/InitialFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/InsertNameFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/InsertNameFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/ListaPersonajesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/ListaPersonajesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/MainMenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/MainMenuFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/SuccessFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/SuccessFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/WrongFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/WrongFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/model/api/RickAndMortyService.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/model/viewmodel/CharactersViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/model/viewmodel/CharactersViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/GameFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/GameFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_initial.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_initial.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_insert_name.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_insert_name.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lista_personajes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_lista_personajes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_success.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_success.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_wrong.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_wrong.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +96,9 @@
       <recent name="D:\Documentos\Repositorios\ProyectoHyHAndroid\app\src\main\java\com\jalper\personajes\presentation" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.jalper.personajes.presentation" />
       <recent name="com.jalper.personajes.presentation.fragment" />
+      <recent name="com.jalper.personajes" />
+      <recent name="com.jalper.personajes.presentation" />
     </key>
   </component>
   <component name="RunManager">

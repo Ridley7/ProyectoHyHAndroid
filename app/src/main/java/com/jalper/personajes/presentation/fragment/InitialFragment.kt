@@ -1,4 +1,4 @@
-package com.jalper.personajes
+package com.jalper.personajes.presentation.fragment
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.jalper.personajes.R
 import com.jalper.personajes.databinding.FragmentInitialBinding
-import com.jalper.personajes.databinding.FragmentInsertNameBinding
 import com.jalper.personajes.model.PreferenceKeys
 
 class InitialFragment : Fragment() {

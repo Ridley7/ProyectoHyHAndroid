@@ -1,4 +1,4 @@
-package com.jalper.personajes
+package com.jalper.personajes.presentation.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.jalper.personajes.databinding.FragmentListaPersonajesBinding
 import com.jalper.personajes.model.ResourceState
 import com.jalper.personajes.model.viewmodel.CharacterListState

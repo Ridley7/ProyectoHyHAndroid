@@ -1,4 +1,4 @@
-package com.jalper.personajes
+package com.jalper.personajes.presentation.fragment
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.jalper.personajes.R
 import com.jalper.personajes.databinding.FragmentMainMenuBinding
 import com.jalper.personajes.model.PreferenceKeys
 import com.jalper.personajes.model.ResourceState
