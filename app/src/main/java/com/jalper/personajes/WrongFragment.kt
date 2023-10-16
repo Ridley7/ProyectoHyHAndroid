@@ -152,7 +152,6 @@ class WrongFragment : Fragment() {
         }
 
         binding.btnTryAgain.setOnClickListener{
-
             findNavController().navigate(R.id.action_wrongFragment_to_gameFragment)
         }
     }

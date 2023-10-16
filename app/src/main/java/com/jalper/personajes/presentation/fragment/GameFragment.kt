@@ -172,9 +172,5 @@ class GameFragment : Fragment(){
         }
 
     }
-
-
-
-
 }
 

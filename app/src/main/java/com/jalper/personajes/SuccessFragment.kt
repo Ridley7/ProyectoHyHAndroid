@@ -47,7 +47,7 @@ class SuccessFragment : Fragment() {
         charactersViewModel = ViewModelProvider(requireActivity()).get(CharactersViewModel::class.java)
 
         //Añadimos puntuacion
-        charactersViewModel.setPuntuation(10)
+        charactersViewModel.addPuntuation(10)
     }
 
 

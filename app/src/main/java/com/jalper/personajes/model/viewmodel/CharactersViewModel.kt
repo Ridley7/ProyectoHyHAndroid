@@ -29,11 +29,15 @@ class CharactersViewModel: ViewModel() {
     }
 
     fun setPuntuation(value: Int){
-        puntuation += value
+        puntuation = value
     }
 
     fun getPuntuation():Int{
         return puntuation
+    }
+
+    fun addPuntuation(value: Int){
+        puntuation += value
     }
 
     fun fetchCharacters(){
