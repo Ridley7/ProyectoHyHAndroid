@@ -2,5 +2,5 @@
 <resources>
 
     <dimen name="margin_button">32dp</dimen>
-
+    <dimen name="margin_standard">16dp</dimen>
 </resources>
