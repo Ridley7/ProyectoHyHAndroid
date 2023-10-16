@@ -2,4 +2,7 @@
     <string name="app_name">Personajes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jugar">Jugar</string>
+    <string name="personajes">Personajes</string>
+    <string name="historico">Historico</string>
 </resources>
