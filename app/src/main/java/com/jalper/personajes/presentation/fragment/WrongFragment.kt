@@ -54,100 +54,49 @@ class WrongFragment : Fragment() {
         historic = preferences?.getString(PreferenceKeys.HISTORIC_KEY, "null") ?: "null"
         userName = (preferences?.getString(PreferenceKeys.NAME_KEY, "null") ?: null).toString()
 
+        val gson = Gson()
+        var listaGame = mutableListOf<Game>()
+
         if(historic == "null"){
-
-            //Creamos JSON
-            //1. Creamos un objeto de la clase Game
-            val game = Game(
-                player = userName,
-                puntuation = charactersViewModel.getPuntuation(),
-                date = System.currentTimeMillis()
-            )
-
-            //2. Creamos una lista de game
-            val listaPartidas = mutableListOf<Game>()
-
-            //3. Metemos el juego en la lista
-            listaPartidas.add(game)
-
-            //4. Convertimos a JSON
-            val gson = Gson()
-            val json = gson.toJson(listaPartidas)
-
-            //5. Metemos el json en los shared preferences
-            val editor: SharedPreferences.Editor? = preferences?.edit()
-            editor?.putString(PreferenceKeys.HISTORIC_KEY, json)
-            editor?.apply()
-
-            Log.i("FLAG", "100")
-
+            listaGame.add(createGame(userName, charactersViewModel.getPuntuation()))
         }
-        else{
-            //Si no es null, extraemos la lista de games
-            val gson = Gson()
-
-            val type = object : TypeToken<MutableList<Game>>(){}.type
-            var listaGame : MutableList<Game> = mutableListOf<Game>()
-            listaGame = gson.fromJson(historic, type)
+        else
+        {
+            listaGame = gson.fromJson(historic, object : TypeToken<MutableList<Game>>() {}.type)
 
             //Comprobamos el tamaño de la lista
             if(listaGame.size >= 10){
+                shiftElementsInList(listaGame)
+                listaGame[0] = createGame(userName, charactersViewModel.getPuntuation())
 
-                Log.i("FLAG", "200")
-
-                //Desplazamos todos los elementos de la lista
-                val lastIndex = listaGame.size - 1
-
-                for(i in lastIndex downTo 1){
-                    listaGame[i] = listaGame[i - 1]
-                }
-
-                //Insertamos en la primera posicion el elemento nuevo
-                val game = Game(
-                    player = userName,
-                    puntuation = charactersViewModel.getPuntuation(),
-                    date = System.currentTimeMillis()
-                )
-
-                listaGame[0] = game
-
-                Log.i("FLAG", listaGame.size.toString())
-
-                //Guardamos la lista en Shared preferences
-                val json = gson.toJson(listaGame)
-
-                //Metemos el json en los shared preferences
-                val editor: SharedPreferences.Editor? = preferences?.edit()
-                editor?.putString(PreferenceKeys.HISTORIC_KEY, json)
-                editor?.apply()
-
-            }else{
-
-                Log.i("FLAG", "300")
-
-                //Añadimos la nueva informacion
-                //1. Creamos un objeto de la clase Game
-                val game = Game(
-                    player = userName,
-                    puntuation = charactersViewModel.getPuntuation(),
-                    date = System.currentTimeMillis()
-                )
-
-                //2. Metemos el juego en la lista
-                listaGame.add(game)
-
-                //3. Convertimos a json
-                val json = gson.toJson(listaGame)
-
-                //4. Metemos el json en los shared preferences
-                val editor: SharedPreferences.Editor? = preferences?.edit()
-                editor?.putString(PreferenceKeys.HISTORIC_KEY, json)
-                editor?.apply()
+            }else
+            {
+                listaGame.add(createGame(userName, charactersViewModel.getPuntuation()))
             }
         }
+        saveGameListToJsonAndPreferences(listaGame)
 
-        //ponemos puntuacion a 0
         charactersViewModel.setPuntuation(0)
+    }
+
+    private fun createGame(player: String, puntuation: Int): Game {
+        return Game(
+            player = player,
+            puntuation = puntuation,
+            date = System.currentTimeMillis()
+        )
+    }
+
+    private fun shiftElementsInList(listaGame: MutableList<Game>) {
+        for (i in listaGame.size - 1 downTo 1) {
+            listaGame[i] = listaGame[i - 1]
+        }
+    }
+
+    private fun saveGameListToJsonAndPreferences(listaGame: MutableList<Game>) {
+        val gson = Gson()
+        val json = gson.toJson(listaGame)
+        preferences?.edit()?.putString(PreferenceKeys.HISTORIC_KEY, json)?.apply()
     }
 
     private fun initUI(){
