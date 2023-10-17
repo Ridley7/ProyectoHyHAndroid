@@ -110,7 +110,7 @@ class WrongFragment : Fragment() {
         }
 
         //Seteamos el text view de respuesta correcta
-        binding.tvAnswer.text = args.wrongAnswer
+        binding.tvAnswer.text = args.correctAnswer
     }
 
 }

@@ -90,10 +90,10 @@ class GameFragment : Fragment(){
             findNavController().navigate(R.id.action_gameFragment_to_successFragment)
         }
 
-        val onWrongAnswerClick = { wrongAnser: String ->
+        val onWrongAnswerClick = {
             findNavController().navigate(
                 GameFragmentDirections.actionGameFragmentToWrongFragment(
-                    wrongAnswer = wrongAnser
+                    correctAnswer = newCharacter.nombrePersonaje
                 )
             )
         }
@@ -102,7 +102,7 @@ class GameFragment : Fragment(){
             if (correctOption == "opcion_a") {
                 onCorrectAnswerClick()
             } else {
-                onWrongAnswerClick(newCharacter.opcionA)
+                onWrongAnswerClick()
             }
         }
 
@@ -110,7 +110,7 @@ class GameFragment : Fragment(){
             if (correctOption == "opcion_b") {
                 onCorrectAnswerClick()
             } else {
-                onWrongAnswerClick(newCharacter.opcionB)
+                onWrongAnswerClick()
             }
         }
 
@@ -118,7 +118,7 @@ class GameFragment : Fragment(){
             if (correctOption == "opcion_c") {
                 onCorrectAnswerClick()
             } else {
-                onWrongAnswerClick(newCharacter.opcionC)
+                onWrongAnswerClick()
             }
         }
 
@@ -126,7 +126,7 @@ class GameFragment : Fragment(){
             if (correctOption == "opcion_d") {
                 onCorrectAnswerClick()
             } else {
-                onWrongAnswerClick(newCharacter.opcionD)
+                onWrongAnswerClick()
             }
         }
     }
