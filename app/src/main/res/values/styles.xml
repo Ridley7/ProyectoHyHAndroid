@@ -13,5 +13,9 @@
     </style>
 
     <!-- Labels -->
+    <style name="LabelTitle">
+        <item name="android:textSize">36dp</item>
+        <item name="android:gravity">center</item>
+    </style>
 
 </resources>

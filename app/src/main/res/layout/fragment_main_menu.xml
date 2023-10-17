@@ -11,10 +11,11 @@
         android:id="@+id/tv_nombre_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugador: Franks"
-        android:paddingEnd="16dp"
+        android:paddingEnd="@dimen/padding_standard"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Jugador: Franks"
+        />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_icon_presentation"
@@ -24,8 +25,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="64dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginRight="@dimen/margin_standard"
+        android:layout_marginLeft="@dimen/margin_standard"
         android:src="@drawable/actor" />
 
     <androidx.appcompat.widget.AppCompatButton

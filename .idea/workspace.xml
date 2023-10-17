@@ -11,8 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="db0cf584-0384-4a6a-bcc1-bde1d72b3c8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/adapter/CharactersListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/adapter/CharactersListAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/InsertNameFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/jalper/personajes/presentation/fragment/InsertNameFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_insert_name.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_insert_name.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimensiones.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimensiones.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>

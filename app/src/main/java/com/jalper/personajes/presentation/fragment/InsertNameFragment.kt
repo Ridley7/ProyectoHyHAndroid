@@ -33,13 +33,11 @@ class InsertNameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initUI()
-
     }
 
     private fun initUI(){
         binding.btnAddName?.setOnClickListener{
 
-            //Comprobamos que se ha escrito algo en el edit text
             val playerName = binding.etPlayerName.text.toString()
 
             if(playerName.isNotEmpty()){
@@ -51,9 +49,6 @@ class InsertNameFragment : Fragment() {
 
                 findNavController().navigate(R.id.action_insertNameFragment_to_mainMenuFragment)
             }
-
-
         }
     }
-
 }

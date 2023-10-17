@@ -8,8 +8,7 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36dp"
-        android:gravity="center"
+        style="@style/LabelTitle"
         android:text="@string/title_application"/>
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -17,13 +16,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:hint="Introduzca nombre del jugador"
+        android:hint="@string/enter_name"
         android:layout_marginTop="100dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_add_name"
         style="@style/AppButton"
-        android:text="Entrar"
+        android:text="@string/enter"
         android:layout_marginTop="200dp"/>
 
 </RelativeLayout>

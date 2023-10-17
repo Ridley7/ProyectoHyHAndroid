@@ -7,4 +7,6 @@
     <string name="historico">Historico</string>
     <string name="next_question">Siguiente Pregunta</string>
     <string name="title_application">Adivina el Personaje</string>
+    <string name="enter_name">Introduzca nombre del jugador</string>
+    <string name="enter">Entrar</string>
 </resources>
