@@ -68,12 +68,12 @@ class GameFragment : Fragment(){
         }
     }
 
+
     private fun initUI(){
 
         //Seteamos textos en los botones y imagen del personaje
         val newCharacter = charactersViewModel.getRandomCharacter()
 
-        //binding.ivCharacterProfile
         binding.btnOptionaCharacter.text = newCharacter.opcionA
         binding.btnOptionbCharacter.text = newCharacter.opcionB
         binding.btnOptioncCharacter.text = newCharacter.opcionC
@@ -83,140 +83,53 @@ class GameFragment : Fragment(){
             .load(newCharacter.urlImage)
             .into(binding.ivCharacterProfile)
 
-        //Asignamos la respuesta correcta al boton correspondiente
-        when(newCharacter.opcionCorrecta){
-            "opcion_a" -> {
+        //Seteamos listener en los botones del fragmento de juego
+        val correctOption = newCharacter.opcionCorrecta
 
-                //Si la opcion A es la correcta, de momento, tenemos que navegar al success fragment
-                //y los otros botones han de navegar al wrong fragment
-                binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
-                }
-
-                binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionA
-                        )
-                    )
-                }
-
-                binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionA
-                        )
-                    )
-                }
-
-                binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionA
-                        )
-                    )
-                }
-
-            }
-
-            "opcion_b" -> {
-
-                binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
-                }
-
-                binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionB
-                        )
-                    )
-                }
-
-                binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionB
-                        )
-                    )
-                }
-
-                binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionB
-                        )
-                    )
-                }
-
-            }
-
-            "opcion_c" -> {
-
-                binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
-                }
-
-                binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionC
-                        )
-                    )
-                }
-
-                binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionC
-                        )
-                    )
-                }
-
-                binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionC
-                        )
-                    )
-                }
-
-            }
-
-            "opcion_d" -> {
-
-                binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_successFragment)
-                }
-
-                binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionD
-                        )
-                    )
-                }
-
-                binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionD
-                        )
-                    )
-                }
-
-                binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(
-                        GameFragmentDirections.actionGameFragmentToWrongFragment(
-                            wrongAnswer = newCharacter.opcionD
-                        )
-                    )
-                }
-
-            }
-            else -> Log.i("ERROR", "AQUI LA HAS LIADO")
+        val onCorrectAnswerClick = {
+            findNavController().navigate(R.id.action_gameFragment_to_successFragment)
         }
 
+        val onWrongAnswerClick = { wrongAnser: String ->
+            findNavController().navigate(
+                GameFragmentDirections.actionGameFragmentToWrongFragment(
+                    wrongAnswer = wrongAnser
+                )
+            )
+        }
+
+        binding.btnOptionaCharacter.setOnClickListener {
+            if (correctOption == "opcion_a") {
+                onCorrectAnswerClick()
+            } else {
+                onWrongAnswerClick(newCharacter.opcionA)
+            }
+        }
+
+        binding.btnOptionbCharacter.setOnClickListener {
+            if (correctOption == "opcion_b") {
+                onCorrectAnswerClick()
+            } else {
+                onWrongAnswerClick(newCharacter.opcionB)
+            }
+        }
+
+        binding.btnOptioncCharacter.setOnClickListener {
+            if (correctOption == "opcion_c") {
+                onCorrectAnswerClick()
+            } else {
+                onWrongAnswerClick(newCharacter.opcionC)
+            }
+        }
+
+        binding.btnOptiondCharacter.setOnClickListener {
+            if (correctOption == "opcion_d") {
+                onCorrectAnswerClick()
+            } else {
+                onWrongAnswerClick(newCharacter.opcionD)
+            }
+        }
     }
+
 }
 
