@@ -6,4 +6,5 @@
     <string name="personajes">Personajes</string>
     <string name="historico">Historico</string>
     <string name="next_question">Siguiente Pregunta</string>
+    <string name="title_application">Adivina el Personaje</string>
 </resources>

@@ -27,10 +27,11 @@ class CharactersListAdapter: RecyclerView.Adapter<CharactersListAdapter.Characte
 
         holder.itemCharacterName.text = item.nombrePersonaje
 
-
         Glide.with(holder.itemCharacterProfile)
             .load(item.urlImage)
             .into(holder.itemCharacterProfile)
+
+        holder.itemCharacterDescription.text = item.descripcion
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -43,6 +44,7 @@ class CharactersListAdapter: RecyclerView.Adapter<CharactersListAdapter.Characte
         val rootView = binding.root
         val itemCharacterName = binding.tvItemCharacterName
         val itemCharacterProfile = binding.ivItemCharacterProfile
+        val itemCharacterDescription = binding.tvItemCharacterDescription
     }
 
 }

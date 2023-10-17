@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:textSize="36dp"
         android:gravity="center"
-        android:text="Adivina el personaje"/>
+        android:text="@string/title_application"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_player_name"
@@ -22,8 +22,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_add_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/AppButton"
         android:text="Entrar"
         android:layout_marginTop="200dp"/>
 
