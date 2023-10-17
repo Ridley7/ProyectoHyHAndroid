@@ -67,22 +67,7 @@ class ListaPersonajesFragment : Fragment() {
                 binding.pbCharacterList.visibility = View.GONE
                 Toast.makeText(requireContext(), state.error, Toast.LENGTH_SHORT).show()
 
-                //showErrorDialog(state.error)
             }
         }
     }
-
-    /*
-    private fun showErrorDialog(error: String){
-        MaterialAlertDialogBuilder(requireContext())
-            .setTitle("Error")
-            .setMessage(error)
-            .setPositiveButton("Aceptar", null)
-            .setNegativeButton("Reintentar", {dialog, witch ->
-                charactersViewModel.fetchCharacters()
-            })
-    }
-
-     */
-
 }
