@@ -48,14 +48,10 @@ class WrongFragment : Fragment() {
     }
 
     private fun initViewModel(){
-        //inicializamos view model
         charactersViewModel = ViewModelProvider(requireActivity()).get(CharactersViewModel::class.java)
-
-        //guardamos resultados en algun lado por ejemplo player prefs
         preferences = this.getActivity()?.getSharedPreferences(PreferenceKeys.PREF_KEY, Context.MODE_PRIVATE)
 
         historic = preferences?.getString(PreferenceKeys.HISTORIC_KEY, "null") ?: "null"
-
         userName = (preferences?.getString(PreferenceKeys.NAME_KEY, "null") ?: null).toString()
 
         if(historic == "null"){
@@ -83,6 +79,8 @@ class WrongFragment : Fragment() {
             editor?.putString(PreferenceKeys.HISTORIC_KEY, json)
             editor?.apply()
 
+            Log.i("FLAG", "100")
+
         }
         else{
             //Si no es null, extraemos la lista de games
@@ -94,8 +92,8 @@ class WrongFragment : Fragment() {
 
             //Comprobamos el tamaño de la lista
             if(listaGame.size >= 10){
-                //Eliminamos el ultimo elemento de la lista
-                listaGame.removeLast()
+
+                Log.i("FLAG", "200")
 
                 //Desplazamos todos los elementos de la lista
                 val lastIndex = listaGame.size - 1
@@ -113,6 +111,8 @@ class WrongFragment : Fragment() {
 
                 listaGame[0] = game
 
+                Log.i("FLAG", listaGame.size.toString())
+
                 //Guardamos la lista en Shared preferences
                 val json = gson.toJson(listaGame)
 
@@ -122,6 +122,9 @@ class WrongFragment : Fragment() {
                 editor?.apply()
 
             }else{
+
+                Log.i("FLAG", "300")
+
                 //Añadimos la nueva informacion
                 //1. Creamos un objeto de la clase Game
                 val game = Game(
@@ -135,7 +138,6 @@ class WrongFragment : Fragment() {
 
                 //3. Convertimos a json
                 val json = gson.toJson(listaGame)
-                Log.i("FLAG 200", json)
 
                 //4. Metemos el json en los shared preferences
                 val editor: SharedPreferences.Editor? = preferences?.edit()
