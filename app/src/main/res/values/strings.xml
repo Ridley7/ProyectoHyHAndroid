@@ -5,4 +5,5 @@
     <string name="jugar">Jugar</string>
     <string name="personajes">Personajes</string>
     <string name="historico">Historico</string>
+    <string name="next_question">Siguiente Pregunta</string>
 </resources>

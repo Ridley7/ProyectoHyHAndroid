@@ -8,6 +8,7 @@
     android:paddingEnd="16dp"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
+    android:background="@color/background"
     android:gravity="center_vertical">
 
     <LinearLayout
@@ -22,8 +23,9 @@
             android:paddingStart="16dp"
             android:textSize="19sp"
             android:textStyle="bold"
-            android:maxLines="3"
+            android:maxLines="1"
             android:ellipsize="end"
+            android:textColor="@color/title"
             tools:text="Skye Sweetnam" />
 
         <TextView
@@ -31,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
+            android:textColor="@color/info"
             tools:text="12/05/2023" />
 
         <TextView
@@ -40,6 +43,7 @@
             android:textAlignment="textEnd"
             android:textSize="19sp"
             android:textStyle="bold"
+            android:textColor="@color/title"
             tools:text="999 Puntos" />
 
     </LinearLayout>
