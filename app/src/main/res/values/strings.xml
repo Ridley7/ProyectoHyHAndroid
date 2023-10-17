@@ -9,4 +9,11 @@
     <string name="title_application">Adivina el Personaje</string>
     <string name="enter_name">Introduzca nombre del jugador</string>
     <string name="enter">Entrar</string>
+    <string name="who_is_character">¿Quien es este personaje?</string>
+    <string name="success">!Correcto¡</string>
+    <string name="points">PUNTOS:</string>
+    <string name="wrong">!Incorrecto¡</string>
+    <string name="correct_answer">La respuesta correcta es: </string>
+    <string name="retry">Reintentar</string>
+    <string name="exit">Salir</string>
 </resources>

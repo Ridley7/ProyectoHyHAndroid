@@ -23,10 +23,8 @@ class MainMenuFragment : Fragment() {
     }
 
     private var user_name: String = ""
-
     private var preferences: SharedPreferences? = null
 
-    private lateinit var charactersViewModel: CharactersViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,50 +37,14 @@ class MainMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initViewModel()
         initUI()
     }
 
-    private fun initViewModel(){
-        charactersViewModel = ViewModelProvider(requireActivity()).get(CharactersViewModel::class.java)
-
-        charactersViewModel.getCharacterLiveData().observe(viewLifecycleOwner){state ->
-            handleCharacterListState(state)
-        }
-    }
-
-    private fun handleCharacterListState(state: CharacterListState){
-        when(state){
-            is ResourceState.Loading ->{
-                binding.pbMainMenu.visibility = View.VISIBLE
-                binding.btnMainMenuJugar.visibility = View.GONE
-                binding.btnMainMenuLista.visibility = View.GONE
-                binding.btnHistorico.visibility = View.GONE
-            }
-
-            is ResourceState.Success ->{
-                binding.pbMainMenu.visibility = View.GONE
-                binding.btnMainMenuJugar.visibility = View.VISIBLE
-                binding.btnMainMenuLista.visibility = View.VISIBLE
-                binding.btnHistorico.visibility = View.VISIBLE
-
-                //Aqui tenemos que recibir el resultado de la consulta a la API
-                // y probablemente sacar las preguntas
-            }
-
-            is ResourceState.Error ->{
-                binding.pbMainMenu.visibility = View.GONE
-                binding.btnMainMenuJugar.visibility = View.VISIBLE
-                binding.btnMainMenuLista.visibility = View.VISIBLE
-                binding.btnHistorico.visibility = View.VISIBLE
-            }
-        }
-    }
 
     private fun initUI(){
         //Seteamos nombre en la parte superior
         preferences = this.getActivity()?.getSharedPreferences(PreferenceKeys.PREF_KEY, Context.MODE_PRIVATE)
-        user_name = preferences?.getString(PreferenceKeys.NAME_KEY, "mal")?: "null"
+        user_name = preferences?.getString(PreferenceKeys.NAME_KEY, "null")?: "null"
         binding.tvNombrePlayer.text = user_name
 
         //Seteamos navegacion en botones

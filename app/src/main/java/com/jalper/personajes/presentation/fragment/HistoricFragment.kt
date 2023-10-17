@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.jalper.personajes.R
 import com.jalper.personajes.databinding.FragmentHistoricBinding
 import com.jalper.personajes.model.Game
 import com.jalper.personajes.model.PreferenceKeys
@@ -52,9 +51,7 @@ class HistoricFragment : Fragment() {
 
         if(historic != "null"){
 
-            //Si no es null extramos la lista de games
             val gson = Gson()
-
             val type = object : TypeToken<MutableList<Game>>(){}.type
             var listaGame : MutableList<Game> = mutableListOf<Game>()
             listaGame = gson.fromJson(historic, type)
@@ -63,5 +60,4 @@ class HistoricFragment : Fragment() {
 
         }
     }
-
 }

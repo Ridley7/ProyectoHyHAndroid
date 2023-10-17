@@ -48,9 +48,7 @@ class GameFragment : Fragment(){
         charactersViewModel.setupCharactersForGame().observe(viewLifecycleOwner){state ->
             handleCharacterListState(state)
         }
-
     }
-
 
     private fun handleCharacterListState(state: CharacterListState){
         when(state){
