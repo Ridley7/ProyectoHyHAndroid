@@ -96,15 +96,27 @@ class GameFragment : Fragment(){
                 }
 
                 binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionA
+                        )
+                    )
                 }
 
                 binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionA
+                        )
+                    )
                 }
 
                 binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionA
+                        )
+                    )
                 }
 
             }
@@ -116,15 +128,27 @@ class GameFragment : Fragment(){
                 }
 
                 binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionB
+                        )
+                    )
                 }
 
                 binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionB
+                        )
+                    )
                 }
 
                 binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionB
+                        )
+                    )
                 }
 
             }
@@ -136,15 +160,27 @@ class GameFragment : Fragment(){
                 }
 
                 binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionC
+                        )
+                    )
                 }
 
                 binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionC
+                        )
+                    )
                 }
 
                 binding.btnOptiondCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionC
+                        )
+                    )
                 }
 
             }
@@ -156,15 +192,27 @@ class GameFragment : Fragment(){
                 }
 
                 binding.btnOptionbCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionD
+                        )
+                    )
                 }
 
                 binding.btnOptioncCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionD
+                        )
+                    )
                 }
 
                 binding.btnOptionaCharacter.setOnClickListener{
-                    findNavController().navigate(R.id.action_gameFragment_to_wrongFragment)
+                    findNavController().navigate(
+                        GameFragmentDirections.actionGameFragmentToWrongFragment(
+                            wrongAnswer = newCharacter.opcionD
+                        )
+                    )
                 }
 
             }

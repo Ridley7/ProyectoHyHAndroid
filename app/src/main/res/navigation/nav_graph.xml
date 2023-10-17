@@ -76,7 +76,7 @@
             android:id="@+id/action_wrongFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
         <argument
-            android:name="wrong"
+            android:name="wrongAnswer"
             app:argType="string" />
     </fragment>
 

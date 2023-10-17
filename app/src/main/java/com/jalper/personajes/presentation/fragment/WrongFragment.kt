@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.jalper.personajes.R
@@ -29,6 +30,7 @@ class WrongFragment : Fragment() {
     private var preferences: SharedPreferences? = null
     private var historic: String = ""
     private var userName: String = ""
+    val args: WrongFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -147,7 +149,7 @@ class WrongFragment : Fragment() {
     }
 
     private fun initUI(){
-        //Seteamos botones de intentar otra vez y saliar
+        //Seteamos botones de intentar otra vez y salir
         binding.btnExitGame.setOnClickListener{
             findNavController().navigate(R.id.action_wrongFragment_to_mainMenuFragment)
         }
@@ -155,6 +157,9 @@ class WrongFragment : Fragment() {
         binding.btnTryAgain.setOnClickListener{
             findNavController().navigate(R.id.action_wrongFragment_to_gameFragment)
         }
+
+        //Seteamos el text view de respuesta correcta
+        binding.tvAnswer.text = args.wrongAnswer
     }
 
 }
