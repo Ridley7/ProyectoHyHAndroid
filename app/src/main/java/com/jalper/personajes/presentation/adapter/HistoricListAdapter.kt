@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jalper.personajes.databinding.RowHistoricItemBinding
 import com.jalper.personajes.model.Game
+import java.text.SimpleDateFormat
 import java.util.Date
+import java.util.Locale
 
 class HistoricListAdapter : RecyclerView.Adapter<HistoricListAdapter.HistoricListViewHolder>(){
 
@@ -22,11 +24,18 @@ class HistoricListAdapter : RecyclerView.Adapter<HistoricListAdapter.HistoricLis
 
     override fun onBindViewHolder(holder: HistoricListViewHolder, position: Int) {
         val item = historicList[position]
+        val pattern = "dd/MM/yyyy HH:mm"
 
         holder.itemName.text = item.player
         val date = Date(item.date)
-        holder.itemDate.text = date.toString()
-        holder.itemPoints.text = item.puntuation.toString()
+        holder.itemDate.text = formatDate(date)
+        holder.itemPoints.text = "${item.puntuation} puntos."
+    }
+
+    fun formatDate(date: Date): String {
+        val pattern = "dd/MM/yyyy HH:mm"
+        val sdf = SimpleDateFormat(pattern, Locale.getDefault())
+        return sdf.format(date)
     }
 
     @SuppressLint("NotifyDataSetChanged")

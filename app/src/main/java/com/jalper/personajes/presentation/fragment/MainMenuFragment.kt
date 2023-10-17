@@ -49,7 +49,9 @@ class MainMenuFragment : Fragment() {
 
         //Seteamos navegacion en botones
         binding.btnMainMenuJugar.setOnClickListener{
+            //findNavController().navigate(R.id.action_mainMenuFragment_to_gameFragment)
             findNavController().navigate(R.id.action_mainMenuFragment_to_gameFragment)
+            //findNavController().popBackStack(R.id.mainMenuFragment, false)
         }
 
         binding.btnMainMenuLista.setOnClickListener{
