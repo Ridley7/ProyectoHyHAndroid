@@ -34,7 +34,7 @@
         tools:layout="@layout/fragment_main_menu">
         <action
             android:id="@+id/action_mainMenuFragment_to_gameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"/>
         <action
             android:id="@+id/action_mainMenuFragment_to_listaPersonajesFragment"
             app:destination="@id/listaPersonajesFragment" />

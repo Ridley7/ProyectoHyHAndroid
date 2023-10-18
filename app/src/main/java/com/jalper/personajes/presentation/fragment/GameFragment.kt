@@ -40,6 +40,7 @@ class GameFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         initViewModel()
+
     }
 
     private fun initViewModel(){
@@ -49,6 +50,7 @@ class GameFragment : Fragment(){
             handleCharacterListState(state)
         }
     }
+
 
     private fun handleCharacterListState(state: CharacterListState){
         when(state){
