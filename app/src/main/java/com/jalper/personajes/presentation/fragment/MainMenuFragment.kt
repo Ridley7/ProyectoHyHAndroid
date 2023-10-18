@@ -1,5 +1,6 @@
 package com.jalper.personajes.presentation.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -41,11 +42,12 @@ class MainMenuFragment : Fragment() {
     }
 
 
+    @SuppressLint("SetTextI18n")
     private fun initUI(){
         //Seteamos nombre en la parte superior
         preferences = this.getActivity()?.getSharedPreferences(PreferenceKeys.PREF_KEY, Context.MODE_PRIVATE)
         user_name = preferences?.getString(PreferenceKeys.NAME_KEY, "null")?: "null"
-        binding.tvNombrePlayer.text = user_name
+        binding.tvNombrePlayer.text = "Jugador: ${user_name } "
 
         //Seteamos navegacion en botones
         binding.btnMainMenuJugar.setOnClickListener{
